@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model tr_bpkb
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form method="post" action="/home/index">
+        <table border="0" align="left">
+            <tr>
+                <td>Agreement Number</td>
+                <td>Tanggal Faktur</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="agree_no" name="agree_no" value=""></td>
+                <td><input type="text" id="faktur_date" name="faktur_date" value=""></td>
+            </tr>
+            <tr>
+                <td>Branch ID</td>
+                <td>Nomor Polisi</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="branch_id" name="branch_id" value=""></td>
+                <td><input type="text" id="nopol" name="nopol" value=""></td>
+            </tr>
+            <tr>
+                <td>No BPKB</td>
+                <td>Lokasi Penyimpanan</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="nobpkb" name="nobpkb" value=""></td>
+                <td>
+                    <select id="saveloc" name="saveloc">
+                        @foreach (var item in ViewBag.storage_Locations)
+                        {
+                            <option value="@item.location_id">@item.location_name </option>
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tanggal BPKB in</td>
+                <td>Tanggal BPKB</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="bpkb_date_in" name="bpkb_date_in" value=""></td>
+                <td><input type="text" id="bpkb_date" name="bpkb_Date" value=""></td>
+            </tr>
+            <tr>
+                <td>No Faktur</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="fakturno" name="fakturno" value=""></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input name="submit" type="submit" id="submit" value="Save" />
+                    <button type="reset" style="background-color:orange">cancel</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>

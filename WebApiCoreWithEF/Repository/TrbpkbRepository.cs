@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Configuration;
-namespace JWTAuth.WebApi.Repository
+namespace WebApiCoreWithEF.Repository
 {
     public class TrbpkbRepository : ITrbpkb
     {

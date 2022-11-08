@@ -25,14 +25,14 @@ namespace WebApiCoreWithEF.Controllers
         }
 
         [HttpGet]
-        [Route("get-tr_bpkb")]
+        [Route("api/get-tr_bpkb")]
         public async Task<ActionResult<IEnumerable<tr_bpkb>>> Gettr_bpkbAsync()
         {
             return await Task.FromResult(_ITrbpkb.GetListTrbpkb());
 
         }
         [HttpPost]
-        [Route("InsertTrbpkb")]
+        [Route("api/InsertTrbpkb")]
         public async Task<ActionResult<tr_bpkb>> Posttr_bpkb(tr_bpkb tr_bpkb)
         {
 
